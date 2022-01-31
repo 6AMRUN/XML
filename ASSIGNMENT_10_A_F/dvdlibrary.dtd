@@ -1,0 +1,34 @@
+<!--
+   Filename: dvdlibrary.dtd
+   Author: Alexies Farinas
+   Date: November 11, 2020
+-->
+
+<!DOCTYPE dvdlibrary[
+
+<!ELEMENT dvdlibrary (dvd+)>
+    
+<!ELEMENT dvd(title, description, year, company, characters, bonus, purchased)
+<!ATTLIST dvd isbn CDATA #REQUIRED>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT company (#PCDATA)>
+
+<!ELEMENT characters (character+)>
+<!ELEMENT character (#PCDATA)>
+
+<!ELEMENT bonus (feature+)>
+<!ATTLIST bonus num CDATA #REQUIRED>
+<!ELEMENT feature (#PCDATA)>
+
+
+<!ELEMENT purchased (price, location, date)>
+<!ELEMENT purchased from CDATA #IMPLIED> 
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+
+]>
+
